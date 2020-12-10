@@ -1,0 +1,17 @@
+{
+    "name": "martthewz/avalanche-pay",
+    "authors": [
+        {
+            "name": "Martthewz",
+            "email": "diversematt@gmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-0": {
+            "AvalanchePay": "php-sdk/src/"
+        }
+    }
+}

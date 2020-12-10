@@ -1,0 +1,23 @@
+{
+    "name": "avalanchepay/php-sdk",
+    "description": "AvalanchePay Payment GateWay",
+    "type": "library",
+    "authors": [
+    {
+        "name": "martthewz",
+        "email": "diversematt@gmail.com"
+    }],
+    "require":
+    {
+        "php": ">=5.3.0",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload":
+    {
+        "psr-0":
+        {
+            "AvalanchePay": "src/"
+        }
+    }
+}
