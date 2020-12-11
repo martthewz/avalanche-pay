@@ -6,9 +6,8 @@
             "email": "diversematt@gmail.com"
         }
     ],
-    "require": {
-
-    },
+    "require": {},
+    "minimum-stability": "stable",
     "autoload": {
         "psr-0": {
             "AvalanchePay": "php-sdk/src/"
