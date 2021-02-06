@@ -1,11 +1,11 @@
 <?php 
-namespace PayMoney\Api;
+namespace AvalanchePay\Api;
 
-use PayMoney\Common\PayMoneyModel;
+use AvalanchePay\Common\PayMoneyModel;
 
 /**
  * Class Transaction
- * @property \PayMoney\Api\Amount amount
+ * @property \AvalanchePay\Api\Amount amount
  *
  */
 
