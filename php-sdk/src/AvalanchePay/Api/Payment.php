@@ -136,15 +136,23 @@ class Payment extends PayMoneyModel
 
         $amount        = $trans->amount->getTotal();
         $currency      = $trans->amount->getCurrency();
-        $successUrl     = $redirectUrls->getSuccessUrl();
+        $successUrl    = $redirectUrls->getSuccessUrl();
         $cancelUrl     = $redirectUrls->getCancelUrl();
         $paymentMethod = $payer->getPaymentMethod();
+        $userEmail = $payer->getUserEmail();
+        $autoLogin = $payer->getAutoLogin();
+        $firstName = $payer->getFirstName();
+        $lastName = $payer->getLastName();
 
         $req['payer']     = $paymentMethod;
         $req['amount']    = $amount;
         $req['currency']  = $currency;
         $req['successUrl'] = $successUrl;
         $req['cancelUrl'] = $cancelUrl;
+        $req['userEmail'] = $userEmail;
+        $req['firstName'] = $firstName;
+        $req['lastName'] = $lastName;
+        $req['autoLogin'] = $autoLogin;
 
         $header = ['Authorization: Bearer ' . $token];
 
