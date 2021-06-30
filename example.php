@@ -10,7 +10,17 @@ use AvalanchePay\Api\Transaction;
 
 //Payer Object
 $payer = new Payer();
-$payer->setPaymentMethod('PayMoney'); //preferably, your system name, example - PayMoney
+$payer->setPaymentMethod('Default'); //leave as default if not sure which payment method to use.
+
+//To enable autologin set autologin as enabled and provide user email, first name and last name
+//example
+/*  $payer = new Payer();
+ *  $payer->setPaymentMethod('Default')
+ *      ->setAutoLogin('Enabled')
+ *      ->setUserEmail('test@gmail.com')
+ *      ->setFirstName('John')
+ *      ->setLastName('Doe');
+ */
 
 //Amount Object
 $amountIns = new Amount();
