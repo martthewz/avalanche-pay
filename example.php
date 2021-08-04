@@ -24,17 +24,19 @@ $payer->setPaymentMethod('Default'); //leave as default if not sure which paymen
 
 //Amount Object
 $amountIns = new Amount();
-$amountIns->setTotal(4.99)->setCurrency('USD'); //must give a valid currency code and must exist in merchant wallet list
+$amountIns->setTotal(4.99)
+        ->setCurrency('USD'); //must give a valid currency code and must exist in merchant wallet list
 
 //Transaction Object
 $trans = new Transaction();
-$trans->setAmount($amountIns);
+$trans->setAmount($amountIns)
+        ->setOrderId(1);
 
 //RedirectUrls Object
 $urls = new RedirectUrls();
-$urls->setSuccessUrl('http://your-merchant-domain.com/example-success.php') //success url - the merchant domain page, to redirect after successful payment, see sample example-success.php file in sdk root, example - http://techvill.net/paymoney_sdk/example-success.php
+$urls->setSuccessUrl('http://your-merchant-domain.com/success-url') //success url - the merchant domain page, to redirect after successful payment, see sample example-success.php file in sdk root, example - http://techvill.net/paymoney_sdk/example-success.php
 
-->setCancelUrl('http:/your-merchant-domain.com/'); //cancel url - the merchant domain page, to redirect after cancellation of payment, example -  http://techvill.net/paymoney_sdk/
+->setCancelUrl('http://your-merchant-domain.com/cancel-url'); //cancel url - the merchant domain page, to redirect after cancellation of payment, example -  http://techvill.net/paymoney_sdk/
 
 
 //Payment Object
