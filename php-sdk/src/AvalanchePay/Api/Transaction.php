@@ -27,4 +27,15 @@ class Transaction extends PayMoneyModel
     {
         return $this->amount;
     }
+    
+    public function setOrderId($order_id)
+    {
+        $this->order_id = $order_id;
+        return $this;
+    }
+
+    public function getOrderId()
+    {
+        return $this->order_id;
+    }
 }

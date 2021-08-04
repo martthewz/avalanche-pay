@@ -25,10 +25,16 @@ if ($_GET)
         echo "Status => " . $decoded["status"] . "<br/>";
         echo "Transaction ID => " . $decoded["transaction_id"] . "<br/>";
         echo "Merchant => " . $decoded["merchant"] . "<br/>";
+        // echo "Order ID => " . $decoded["order_id"] . "<br/>";
         // echo "Currency => " . $decoded["currency"] . "<br/>";
         // echo "Amount => " . $decoded["amount"] . "<br/>";
         // echo "Fee => " . $decoded["fee"] . "<br/>";
         // echo "Total => " . $decoded["total"] . "<br/>";
+    }else{
+        // Transaction not successful
+        echo "Status => " . $decoded["status"] . "<br/>";
+        // echo "Order ID => " . $decoded["order_id"] . "<br/>";
+        echo "Error => " . $decoded["error"] . "<br/>";
     }
 }
 

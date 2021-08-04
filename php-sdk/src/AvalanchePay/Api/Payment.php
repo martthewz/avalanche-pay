@@ -136,6 +136,7 @@ class Payment extends PayMoneyModel
 
         $amount        = $trans->amount->getTotal();
         $currency      = $trans->amount->getCurrency();
+        $orderId      = $trans->getOrderId();
         $successUrl    = $redirectUrls->getSuccessUrl();
         $cancelUrl     = $redirectUrls->getCancelUrl();
         $paymentMethod = $payer->getPaymentMethod();
@@ -147,6 +148,7 @@ class Payment extends PayMoneyModel
         $req['payer']     = $paymentMethod;
         $req['amount']    = $amount;
         $req['currency']  = $currency;
+        $req['orderId']  = $orderId;
         $req['successUrl'] = $successUrl;
         $req['cancelUrl'] = $cancelUrl;
         $req['userEmail'] = $userEmail;
